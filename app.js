@@ -2,6 +2,7 @@
 const $=id=>document.getElementById(id);
 if(!window.L){$('status').textContent='Não foi possível carregar o Leaflet. Confira sua conexão e recarregue a página.';}else{
 const mapa=L.map('mapa',{preferCanvas:true}).setView([-9.91,-63.04],10);
+window.geoportalMapa=mapa;
 const bases={ruas:L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'}),satelite:L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',{maxZoom:19,attribution:'Tiles © Esri — Source: Esri, Maxar, Earthstar Geographics, and the GIS User Community'}),topografico:L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png',{maxNativeZoom:17,maxZoom:19,attribution:'Map data © OpenStreetMap contributors, SRTM | Map style © <a href="https://opentopomap.org">OpenTopoMap</a> (CC-BY-SA)'})};
 bases.ruas.addTo(mapa);L.control.scale({imperial:false}).addTo(mapa);
 for(const [nome,base]of Object.entries(bases)){base.on('tileerror',()=>{$('avisoTiles').textContent='Falha no carregamento do mapa base. Verifique a internet ou escolha outro fundo.';});base.on('load',()=>{$('avisoTiles').textContent='';});}
