@@ -3,3 +3,5 @@
 .mapbases{position:absolute;z-index:600;top:15px;left:60px;margin:0;padding:10px;background:#fffffff2;border:1px solid #c4d5dc;border-radius:8px;box-shadow:0 3px 15px #1233}.mapbases h2{font-size:13px;margin:0 0 7px}.mapbases .bases{gap:5px}.mapbases button{padding:7px 11px}.maptools{top:110px}#avisoTiles{top:155px}@media(max-width:760px){.mapbases{top:10px;left:50px;padding:8px}.mapbases button{font-size:12px;padding:6px 9px}.maptools{top:100px;left:auto;right:10px}.mapbases h2{font-size:12px}#avisoTiles{top:145px}}@media print{.mapbases{display:none!important}}
 
 .focoscheck{display:flex;gap:8px;align-items:center}.focoscheck input{width:auto}.legend .foco{width:10px;height:10px;border-radius:50%;background:#ff6b24;border:1px solid #8e260e;margin-right:20px}button:disabled{opacity:.55;cursor:default}
+
+.downloads{display:grid;gap:8px}.downloads a{display:block;border:1px solid #b8cbd4;border-radius:6px;background:white;padding:10px;font-size:14px;text-decoration:none}.downloads a:hover{background:#e2f2ef}.downloads a:focus-visible{outline:3px solid #149c78;outline-offset:2px}
